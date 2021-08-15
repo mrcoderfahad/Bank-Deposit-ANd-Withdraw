@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------- Taliwind css ----------->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Criminal Bank</title>
+</head>
+<body class="bg-gray-200">
+    <header>
+        <h1 class="text-4xl text-center mt-8">$$Shark
+            <span class="font-semibold text-purple-600">Criminal Bank$$</span>
+        </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-------- Balance And Transaction ------------>
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-green-400 p-8 rounded shadow-md p-8 rounded transition duration-500 ease-in-out hover:bg-red-400 transform hover:-translate-y-1 hover:scale-110">
+                    <h3 class="text-3xl">Deposit</h3>
+                    <h4 class="text-2xl">$<span id="deposit-total">00</span></h4>
+                </div>
+                <div class="bg-pink-400 p-8 rounded shadow-md transition duration-500 ease-in-out hover:bg-red-400 transform hover:-translate-y-1 hover:scale-110">
+                    <h3 class="text-3xl">Withdraw</h3>
+                    <h4 class="text-2xl">$<span id="withdraw-total">00<span</h4>
+                </div>
+                <div class="bg-blue-400 p-8 rounded shadow-md transition duration-500 ease-in-out hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110">
+                    <h3 class="text-3xl">Balance</h3>
+                    <h4 class="text-2xl">$<span id="balance-total">00</span></h4>
+                </div>
+            </div>
+        </section>
+
+        <!------- DEposit and Withdraw --------->
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-5">
+                <div class="bg-blue-300 shadow-md p-8 rounded">
+                    <h3 class="text-2xl text-white font-bold">Please Deposit Here</h3>
+                    <div>
+                        <div>
+                            <input id="deposit-input" class="border block border-gray-400 rounded w-3/4 mb-4 px-2" type="text" name="" id="" placeholder="$ Deposit Here">
+                            <button id="deposit-button" class="bg-yellow-400 px-4 rounded text-white font-medium">Deposit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yellow-300 shadow-md p-8 rounded">
+                    <h3 class="text-2xl text-white font-bold">Withdraw From Here</h3>
+                    <div>
+                        <div>
+                            <input id="withdraw-input" class="border block border-yellow-400 rounded w-3/4 mb-4 px-2" type="text" name="" id="" placeholder="$ Withdraw Here">
+                            <button id="withdraw-button" class="bg-yellow-400 px-4 rounded text-white font-medium">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/banking.js"></script>
+</body>
+</html>
